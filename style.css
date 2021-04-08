@@ -1,0 +1,338 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	text-transform: uppercase;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	letter-spacing: 1px;
+	color: #000;
+}
+
+img {
+	max-width: 1200px;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+li {
+	list-style: none;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 0.5rem;
+}
+
+/* HEADER */
+
+header {
+	margin: 1.2rem 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+header a {
+	align-self: center;
+}
+
+/* SLIDER */
+
+main {
+	margin-top: 5vh;
+}
+
+.slider {
+	margin-bottom: 4rem;
+	overflow: hidden;
+}
+
+
+.slides {
+	display: flex;
+}
+
+.slide {
+	min-width: 100%;
+	cursor: pointer;
+}
+
+.slide:hover .slide-footer {
+	background-color: #3daee4;
+}
+
+.slide:hover .slide-body img {
+	transform: scale(1.01);
+}
+
+.slide-body {
+	position: relative;
+	overflow: hidden;
+}
+
+.slide-body img {
+	width: 100%;
+	height: auto;
+	transition: all linear .5s;
+}
+
+.slider__slide-title {
+	position: absolute;
+	bottom: 1.5rem;
+	left: 4rem;
+	font-size: 2.8rem;
+	font-weight: bold;
+}
+
+.slide-footer {
+	margin-top: -4px;
+	background-color: #1d9cd8;
+	height: 4rem;
+	padding: 0 4rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transition: all linear .3s;
+}
+
+.slide-footer h4 {
+	font-weight: normal;
+	font-size: 1.5rem;
+}
+
+.second-title {
+	font-weight: normal;
+	font-size: 4rem;
+}
+
+.slide-sale {
+	display: block;
+	font-size: 12.5rem;
+}
+
+.points {
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+.point {
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background-color: #1d9cd8;
+	margin-right: 1.5rem;
+	cursor: pointer;
+}
+
+.point:last-child {
+	margin-right: 0;
+}
+
+.point.active {
+	background-color: #000;
+}
+
+/* PREVIWS */
+
+.product-preview {
+	display: flex;
+	justify-content: space-between;
+}
+
+.product-preview ul {
+	align-self: center;
+}
+
+.product-preview li {
+	margin-bottom: 0.7rem;
+}
+
+.product-preview li.active a {
+	color: #000;
+}
+
+.product-preview__img-block {
+	align-self: center;
+}
+
+.product-preview__link {
+	color: #1d9cd8;
+	font-size: 1.3rem;
+	transition: all linear .3s;
+}
+
+.product-preview__link:hover {
+	color: #000;
+}
+
+/* FOOTER */
+
+footer {
+	margin-top: 15rem;
+}
+
+.footer-info {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 5rem;
+}
+
+.footer-info__left {
+	display: flex;
+	justify-content: space-between;
+	width: 30%;
+}
+
+.footer-info__right {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 50%;
+}
+
+.footer-info__phone {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-info__phone a {
+	cursor: pointer;
+	font-size: 2rem;
+}
+
+.footer-info__phone a:hover {
+	text-decoration: underline;
+}
+
+.footer-info__phone span {
+	font-size: 0.85rem;
+}
+
+.footer-info__contacts li span {
+	position: relative;
+}
+
+.footer-info__contacts li span::before {
+	content: ' ';
+	position: absolute;
+	width: 9px;
+	height: 9px;
+	border-bottom: 1px solid #000;
+	top: 2px;
+	right: -8px;
+	transform: rotate(-45deg);
+}
+
+.footer-info__contacts li span::after {
+	content: ' ';
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+	top: 6px;
+	right: -11px;
+}
+
+footer li {
+	margin-bottom: 0.9rem;
+	cursor: pointer;
+	transition: all linear .3s;
+}
+
+footer li:hover {
+	color: #1d9cd8;
+}
+
+.footer-conf {
+	margin-bottom: 2rem;
+}
+
+/* MODALS */
+
+.protect-modal {
+	position: fixed;
+	bottom: 2rem;
+	left: 1rem;
+}
+
+.modal-wrapper {
+	position: relative;
+	background-color: #4cc7e9;
+	color: #fff;
+	padding: 1.5rem 1rem 1.5rem 3rem;
+	display: flex;
+	max-width: 481px;
+	letter-spacing: 0;
+	font-weight: bold;
+	text-transform: none;
+}
+
+.modal-wrapper::before {
+	content: url('./img/modal-1.png');
+	position: absolute;
+	top: 0;
+	left: 0.6rem;
+}
+
+.modal-wrapper svg {
+	position: absolute;
+	top: 0.4rem;
+	right: 0.4rem;
+	cursor: pointer;
+}
+
+.modal-wrapper svg path {
+	stroke: #fff;
+	transition: all linear .3s;
+}
+
+.modal-wrapper svg:hover path {
+	stroke: #99c2d4;
+}
+
+
+.modal-desc h4{
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+.modal-desc p{
+	font-size: 0.9rem;
+}
+
+.modal-btn {
+	cursor: pointer;
+	align-self: center;
+	padding: 0.8rem 2.5rem;
+	border: none;
+	font-weight: bold;
+	font-size: 0.9rem;
+	transition: all linear .3s;
+}
+
+.modal-btn:hover {
+	background-color: #c4dbe6;
+}
+/* MODIFICATORS */
+
+.blue {
+	color: #1d9cd8;
+}
+.white {
+	color: #fff;
+}
+.hideme {
+	display: none;
+}
+
+/* MEDIA */
+
