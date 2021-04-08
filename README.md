@@ -9,4 +9,4 @@
 * JavaScript
 * localStorage
 
-(Ссылка на Github Pages)[]
+[Ссылка на Github Pages](https://eno-tech0.github.io/page-slider/)
